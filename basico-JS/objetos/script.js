@@ -12,3 +12,11 @@ console.log(pessoa);
 console.log(pessoa.nome);
 
 pessoa.darOi();
+
+function criaPessoa(n,sN,id){
+return {n, sN,id }
+}
+
+let p1 = criaPessoa(`Fagner`, `Ferreira`, 20)
+
+console.log(p1);
