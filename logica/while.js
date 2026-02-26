@@ -23,13 +23,13 @@
 
 let lista = [1,2,3,4,5,6,7,8,9,10];
 
-// for (let v of lista){
-//     if ( v % 2 === 1) {
-//         continue
-//     }
-//     console.log(v);
+for (let v of lista){
+    if ( v % 2 === 1) {
+        continue
+    }
+    console.log(v);
     
-// }
+}
 
 let cor = `roxo`
 
