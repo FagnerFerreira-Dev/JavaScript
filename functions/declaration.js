@@ -1,4 +1,4 @@
-dentro de objetos:
+// dentro de objetos:
 
 const cachorro = {
     nome: `billy`,
