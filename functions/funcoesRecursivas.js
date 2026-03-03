@@ -1,15 +1,20 @@
 function fatorial(n) {
-// n! = n.(n-1)
-// caso base:
-    if (n === 0){
-        return 1
-    }
-// passo recursivo:
 
-return n * fatorial(n-1)
+    if (n === 0){
+        // console.log(n);
+        return 1;
+    }
+    
+    
+    return n * fatorial(n-1) 
+    
 
 }
 
+
+// fatorial(5)
+console.log(`----------------------`);
+
 console.log(fatorial(5));
-console.log(fatorial(2));
+
 
