@@ -142,3 +142,78 @@ console.log(revBana);
 let addKiwi = [...frutas]
 addKiwi.splice(1,0,`kiwi`)
 console.log(addKiwi);
+
+
+
+// ======================================
+// EXERCÍCIO 13 - reduce
+// ======================================
+
+// Some todos os salários das pessoas.
+
+let SalariosSoma = pessoas.reduce((act, el)=>{return act += el.salario}, 0)
+
+console.log(SalariosSoma);
+
+
+// ======================================
+// EXERCÍCIO 14 - reduce
+// ======================================
+
+// Calcule a média de idade das pessoas.
+
+
+// ======================================
+// EXERCÍCIO 15 - reduce
+// ======================================
+
+// Transforme o array em um objeto assim:
+
+// {
+//   Ana: 15,
+//   Carlos: 22,
+//   Marina: 17,
+//   João: 30,
+//   Lucas: 16,
+//   Fernanda: 25
+// }
+
+
+// ======================================
+// EXERCÍCIO 16 - reduce (desafio)
+// ======================================
+
+// Crie um objeto agrupando menores e maiores de idade.
+
+// Resultado esperado:
+
+// {
+//   menores: ["Ana", "Marina", "Lucas"],
+//   maiores: ["Carlos", "João", "Fernanda"]
+// }
+
+
+// ======================================
+// ARRAY PARA OS DESAFIOS
+// ======================================
+
+const numeros = [10, 20, 30, 40, 50];
+
+
+// ======================================
+// EXERCÍCIO 17 - map + reduce
+// ======================================
+
+// Multiplique todos os números por 2 usando map.
+// Depois some todos usando reduce.
+
+
+// ======================================
+// EXERCÍCIO 18 - filter + map
+// ======================================
+
+// Pegue apenas números maiores que 25.
+// Depois crie um novo array triplicando eles.
+
+// Resultado esperado:
+// [90, 120, 150]
