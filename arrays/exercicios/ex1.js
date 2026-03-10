@@ -161,6 +161,14 @@ console.log(SalariosSoma);
 // ======================================
 
 // Calcule a média de idade das pessoas.
+let mediaIdade = pessoas.reduce((ac, el, i)=>{
+  ac += el.idade;
+  if (i >= (pessoas.length-1)) {return ac / (i+1)}
+  return ac
+},0
+
+)
+console.log(mediaIdade);
 
 
 // ======================================
@@ -178,6 +186,13 @@ console.log(SalariosSoma);
 //   Fernanda: 25
 // }
 
+let objeto = pessoas.reduce((ac, el)=>{
+    ac[el.nome] = el.idade;
+    return ac
+  
+},{})
+
+console.log(objeto);
 
 // ======================================
 // EXERCÍCIO 16 - reduce (desafio)
@@ -192,10 +207,25 @@ console.log(SalariosSoma);
 //   maiores: ["Carlos", "João", "Fernanda"]
 // }
 
+let Pmaiores = []
+let Pmenores = []
+let MaioresEMenores = pessoas.reduce((ac, el)=>{
+  if (el.idade >= 18) {
+    Pmaiores.push(el.nome)
+    ac.maiores = Pmaiores
+    return ac
+  } 
+    Pmenores.push(el.nome)
+    ac.menores = Pmenores
+    return ac
+},{})
 
+console.log(MaioresEMenores);
 // ======================================
 // ARRAY PARA OS DESAFIOS
 // ======================================
+
+
 
 const numeros = [10, 20, 30, 40, 50];
 
