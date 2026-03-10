@@ -236,6 +236,13 @@ const numeros = [10, 20, 30, 40, 50];
 
 // Multiplique todos os números por 2 usando map.
 // Depois some todos usando reduce.
+let multiplicados = numeros.map((el)=> el * 2)
+let calc = multiplicados.reduce((ac, el) => {
+  return ac + el
+})
+
+console.log(calc);
+
 
 
 // ======================================
@@ -244,6 +251,10 @@ const numeros = [10, 20, 30, 40, 50];
 
 // Pegue apenas números maiores que 25.
 // Depois crie um novo array triplicando eles.
+
+let maiores5 = numeros.filter(el=>el> 25)
+let novoArray = maiores5.map((el) => el *3)
+console.log(novoArray);
 
 // Resultado esperado:
 // [90, 120, 150]
