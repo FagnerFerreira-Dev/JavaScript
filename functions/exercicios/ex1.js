@@ -140,8 +140,17 @@ const p1 = criarPessoa("Fagner", "Ferreira", 1.80, 80)
 console.log(p1.nomeCompleto())
 console.log(p1.imc())
 */
+function criarPessoa(nome, sobrenome, altura, peso) {
+  return {
+    nomeCompleto(){return nome + ` ` + sobrenome},
+    imc(){ return (peso / (altura * altura)).toFixed(1)},
+  }
+}
 
+p1 = criarPessoa(`Fagner`, `Ferreira`, 1.65, 63)
 
+console.log(p1.nomeCompleto());
+console.log(p1.imc());
 // ==============================================
 // EXERCÍCIO 4 — FACTORY FUNCTION COM CLOSURE
 // ==============================================
@@ -173,6 +182,22 @@ conta.depositar(50)
 console.log(conta.saldoAtual)
 */
 
+function criarContaBancaria(saldoInicial){
+  return {
+    depositar(){
+
+    },
+
+    StaticRange(){
+
+    },
+
+    get saldoAtual(){
+      
+    }
+
+  }
+}
 
 // ==============================================
 // EXERCÍCIO 5 — FUNÇÃO CONSTRUTORA
