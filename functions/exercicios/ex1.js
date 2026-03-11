@@ -45,6 +45,19 @@ const pessoa = {
 console.log(apresentarPessoa(pessoa))
 */
 
+const pessoa = {
+  nome: "Fagner",
+  idade: 25,
+  cidade: "Belém"
+}
+
+function apresentarPessoa({nome, idade, cidade}) {
+  return `Meu nome é ${nome}, tenho ${idade} anos e moro em ${cidade}`
+}
+
+console.log(apresentarPessoa(pessoa));
+
+
 
 // ==============================================
 // EXERCÍCIO 2 — DESESTRUTURAÇÃO COM PADRÃO
@@ -74,6 +87,26 @@ A função deve retornar um objeto novo:
 
 Teste com produtos com e sem estoque.
 */
+
+let produto1 = {
+  nome: `carro`,
+  preco: 25000,
+  estoque: 5
+}
+let produto2 = {
+  nome: `carro`,
+  preco: 25000
+}
+
+function criarProduto({nome, preco, estoque}) {
+  if (isNaN(estoque) || estoque <= 0) {return 0 }
+  return {
+    nome, preco, estoque
+  }
+}
+
+console.log(criarProduto(produto1));
+console.log(criarProduto(produto2));
 
 
 // ==============================================
