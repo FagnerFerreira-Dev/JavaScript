@@ -183,21 +183,21 @@ console.log(conta.saldoAtual)
 */
 
 function criarContaBancaria(saldoInicial){
+  let saldo = saldoInicial;
   return {
-    depositar(){
-
-    },
-
-    StaticRange(){
-
-    },
-
-    get saldoAtual(){
-      
-    }
+    depositar(valor){saldo += valor},
+    sacar(valor){saldo -=valor},
+    get saldoAtual(){return saldo},
 
   }
 }
+
+let conta1 = criarContaBancaria(100);
+conta1.depositar(300)
+conta1.sacar(10)
+conta1.saldoAtual = 100
+console.log(conta1.saldoAtual);
+
 
 // ==============================================
 // EXERCÍCIO 5 — FUNÇÃO CONSTRUTORA
