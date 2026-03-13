@@ -229,7 +229,16 @@ Resultado esperado:
 
 90
 */
+function Produto(nome, preco){
+  this.nome = nome;
+  this.preco = preco;
+  this.desconto = (percentual) => this.preco -= percentual
+}
 
+
+const pessoa1 = new Produto(`camisa`, 50)
+pessoa1.desconto(5);
+console.log(pessoa1.preco);
 
 // ==============================================
 // EXERCÍCIO 6 — FUNÇÃO CONSTRUTORA COM MÉTODO
