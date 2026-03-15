@@ -234,8 +234,6 @@ function Produto(nome, preco){
   this.preco = preco;
   this.desconto = (percentual) => this.preco -= percentual
 }
-
-
 const pessoa1 = new Produto(`camisa`, 50)
 pessoa1.desconto(5);
 console.log(pessoa1.preco);
@@ -273,7 +271,31 @@ const c1 = new Carro("Toyota", 180)
 c1.acelerar()
 c1.acelerar()
 */
+console.log(`-------------------------------------------------------------`);
 
+function Carro(marca, velocidadeMaxima) {
+  this.velocidadeAtual = 0;
+  this.marca = marca;
+  this.velocidadeMaxima= velocidadeMaxima;
+  this.acelerar = ()=>{
+    if(this.velocidadeAtual < velocidadeMaxima)
+    this.velocidadeAtual += 10;
+    return
+    } 
+    console.log(`limite alcanado`);
+}
+const c1 = new Carro(`Toyota`, 180)
+const c2 = new Carro(`Honda`, 20)
+
+
+
+c2.acelerar();
+c2.acelerar();
+c2.acelerar();
+
+console.log(c1.velocidadeAtual);
+ 
+console.log(c2.velocidadeAtual);
 
 // ==============================================
 // EXERCÍCIO 7 — FUNÇÃO GERADORA
@@ -356,7 +378,17 @@ Pois:
 
 5 * 4 * 3 * 2 * 1
 */
+console.log(`-------------------------------`);
 
+function calcFatorias(valor) {
+  
+  if (valor === 0) return 1;
+  return valor * calcFatorias(valor-1)
+
+
+}
+
+console.log(calcFatorias(5));
 
 // ==============================================
 // EXERCÍCIO 11 — FUNÇÃO RECURSIVA (CONTAGEM)
@@ -380,6 +412,15 @@ Saída:
 5
 */
 
+console.log(`----------------------------`);
+
+function contagem(v) {
+  if (v === 0) return;
+  contagem(v- 1)
+  console.log(v);
+  
+}
+contagem(5);
 
 // ==============================================
 // EXERCÍCIO 12 — RETORNO DE FUNÇÃO
@@ -399,6 +440,16 @@ const duplica = criarMultiplicador(2)
 
 console.log(duplica(5)) // 10
 */
+
+function criarMultiplicador(multiplicador) {
+  return function multiplica(num) {
+    return num * multiplicador
+  }
+}
+
+const duplica = criarMultiplicador(2)
+console.log(duplica(5));
+
 
 
 // ==============================================
@@ -423,6 +474,17 @@ Resultado esperado:
 
 "Bom dia, Fagner!"
 */
+
+function criarSaudacao(saudacao) {
+  return (nome) => `${saudacao}, ${nome}`
+}
+
+const boaTarde = criarSaudacao(`Boa tarde`)
+
+console.log(boaTarde(`Fagner`));
+
+
+
 
 
 // ==============================================
