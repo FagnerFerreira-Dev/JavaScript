@@ -484,9 +484,6 @@ const boaTarde = criarSaudacao(`Boa tarde`)
 console.log(boaTarde(`Fagner`));
 
 
-
-
-
 // ==============================================
 // EXERCÍCIO 14 — DESAFIO (CLOSURE)
 // ==============================================
@@ -516,7 +513,20 @@ Se estiver incorreta:
 Use CLOSURE para proteger a senha.
 */
 
+function criarUsuario(nome, senha) {
+  let senhaAtual = senha;
 
+  return {
+    login(senhaTest){
+      if (senhaTest === senhaAtual) {console.log(`Login autorizado`)};
+      if(senhaTest !== senhaAtual) { console.log(`Senha incorreta`)};
+    }
+  }
+}
+
+let us1 = criarUsuario(`Fagner`, 1234)
+
+us1.login(1234)
 // ==============================================
 // FIM DOS EXERCÍCIOS
 // ==============================================
