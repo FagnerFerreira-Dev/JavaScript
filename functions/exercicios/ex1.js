@@ -316,6 +316,22 @@ console.log(gen.next())
 console.log(gen.next())
 console.log(gen.next())
 */
+console.log(`-----------------------------------------------------------`);
+
+function* contador(){
+  yield 1
+  yield 2
+  yield 3
+  yield 4
+  yield 5
+}
+const gen = contador()
+
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
 
 
 // ==============================================
@@ -335,6 +351,21 @@ console.log(id.next().value) // 1
 console.log(id.next().value) // 2
 console.log(id.next().value) // 3
 */
+console.log(`-------------------------------------------------------------------`);
+
+function* geradorId(v = 0){
+while(true) yield ++v
+}
+
+const id = geradorId()
+
+console.log(`seu id é: `, id.next().value);
+console.log(`seu id é: `, id.next().value);
+console.log(`seu id é: `, id.next().value);
+console.log(`seu id é: `, id.next().value);
+
+
+
 
 
 // ==============================================
