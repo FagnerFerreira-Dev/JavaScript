@@ -387,7 +387,10 @@ A variável mensagem NÃO pode existir
 fora da função.
 */
 
-
+(function incicar() {
+  console.log(`sistema iniciado`);
+  
+}())
 // ==============================================
 // EXERCÍCIO 10 — FUNÇÃO RECURSIVA (FATORIAL)
 // ==============================================
