@@ -278,7 +278,18 @@ Resultado esperado:
 }
 */
 
+const numeros = [1,2,3,4,5,6];
 
+let imparesEpares = numeros.reduce((ac, valor)=>{
+    if (valor % 2 === 0) {
+        ac.pares.push(valor)
+    } else{
+        ac.impares.push(valor)
+    }
+    return ac
+},{pares: [], impares : []})
+
+console.log(imparesEpares);
 
 // ==============================================
 // EXERCÍCIO 9 — GERADOR CONTADOR INFINITO
