@@ -158,7 +158,7 @@ function somaArray(arr, v=0) {
     return arr[v] + somaArray(arr, v+1)
 }
 
-console.log(somaArray([1,2,3,4,5,6]));
+console.log(somaArray([1,2,3,4,5,6,7]));
 
 // ==============================================
 // EXERCÍCIO 5 — RECURSÃO MAIOR NÚMERO
@@ -178,7 +178,6 @@ Resultado:
 
 80
 */
-
 
 
 // ==============================================
@@ -201,6 +200,22 @@ aniversario() -> aumenta idade
 mostrarIdade() -> retorna idade
 */
 
+function criarPessoa(nome, idade){
+    let idadeA = idade;
+    return {
+        aniversario(){
+            idadeA += 1
+        },
+        mostrarIdade(){
+            return idadeA;
+        }
+    }
+}
+const p1 = criarPessoa(`Fagner`, 20)
+p1.aniversario()
+p1.aniversario()
+p1.aniversario()
+console.log(p1.mostrarIdade());
 
 
 // ==============================================
@@ -227,6 +242,22 @@ Resultado esperado:
 Use reduce.
 */
 
+const pessoas = [
+ {nome:"Ana", idade:20},
+ {nome:"Carlos", idade:30},
+ {nome:"Maria", idade:25}
+]
+
+
+let pObj = pessoas.reduce((ac, valor)=>{
+    ac[valor.nome] = valor.idade 
+
+    return ac
+
+},{})
+
+
+console.log(pObj);
 
 
 // ==============================================
