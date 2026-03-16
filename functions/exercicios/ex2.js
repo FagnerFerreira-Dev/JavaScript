@@ -121,7 +121,17 @@ const senha = gerarSenha()
 console.log(senha.next().value)
 */
 
+function* gerarSenha(senha = 0){
+    while(true){
+        yield `senha-` + ++senha
+    }
+};
 
+const senha = gerarSenha()
+console.log(senha.next().value);
+console.log(senha.next().value);
+console.log(senha.next().value);
+console.log(senha.next().value);
 
 // ==============================================
 // EXERCÍCIO 4 — RECURSÃO SOMA ARRAY
@@ -143,8 +153,12 @@ Resultado:
 
 Não pode usar loops ou reduce.
 */
+function somaArray(arr, v=0) {
+    if(v === arr.length){return 0}
+    return arr[v] + somaArray(arr, v+1)
+}
 
-
+console.log(somaArray([1,2,3,4,5,6]));
 
 // ==============================================
 // EXERCÍCIO 5 — RECURSÃO MAIOR NÚMERO
