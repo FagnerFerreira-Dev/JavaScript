@@ -308,6 +308,20 @@ Ela deve gerar números infinitamente.
 ...
 */
 
+function* contador2(){
+    let v = 0
+    while(true){
+        yield ++v
+    }
+}
+
+let numero = contador2()
+
+console.log(numero.next().value);
+console.log(numero.next().value);
+console.log(numero.next().value);
+console.log(numero.next().value);
+console.log(numero.next().value);
 
 
 // ==============================================
