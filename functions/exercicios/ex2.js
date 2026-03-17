@@ -388,6 +388,19 @@ const usuario = {
  }
 }
 */
+const usuario = {
+ nome: "Fagner",
+ endereco: {
+  cidade: "Belém",
+  estado: "PA",
+  bairro: `zerão`
+ }
+}
+
+let {nome, endereco: {cidade, ...resto}, } = usuario
+
+console.log(nome, cidade);
+console.log(resto);
 
 
 
@@ -416,7 +429,13 @@ Resultado:
 }
 */
 
+// function contarLetras(palavra, i) {
+//     if (i === palavra.length) {return 0}
+    
+//     contarLetras(palavra, (i+1))
+// }
 
+// console.log(contarLetras(`açai`));
 
 // ==============================================
 // EXERCÍCIO 14 — FILTRAR MAIORES DE IDADE
@@ -433,6 +452,19 @@ const pessoas = [
  {nome:"João", idade:30}
 ]
 */
+
+const pessoas2 = [
+ {nome:"Ana", idade:15},
+ {nome:"Carlos", idade:22},
+ {nome:"Maria", idade:17},
+ {nome:"João", idade:30}
+]
+
+let maioresIdade2 = pessoas2.filter(value => value.idade >= 18)
+.map(value => value.nome)
+
+console.log(maioresIdade2);
+
 
 
 
