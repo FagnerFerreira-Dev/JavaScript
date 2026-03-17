@@ -339,6 +339,12 @@ Exemplo:
 executar(() => console.log("Olá mundo"))
 */
 
+function executar(executa) {
+    executa()
+}
+
+executar(()=> console.log(`Olá mundo`))
+
 
 
 // ==============================================
