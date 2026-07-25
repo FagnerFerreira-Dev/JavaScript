@@ -25,6 +25,54 @@
 //
 // Dom Casmurro - Machado de Assis (1899)
 
+// console.log(l1.emprestado());
+// EXERCICIO 1
+
+
+const criarLivro = (titulo, autor, ano, paginas, emprestado) => {
+    return {
+        titulo, 
+        autor,
+        ano,
+        paginas,
+        emprestado,
+
+        get descricao(){
+            return `${titulo} - ${autor} ${ano} `
+        },
+        emprestar(){
+            this.emprestado = true
+            return `emprestado`
+        },
+        devolver(){
+            this.emprestado = false
+            return `devolvido`
+        }
+    }
+}
+
+let l1 = criarLivro(`Mitologia nordica`, `Neil Gaiman`, 2005, 50, false)
+
+{
+console.log(l1.emprestado);
+console.log(l1.devolver());
+console.log(l1.emprestado);
+console.log(l1.descricao);
+l1.descricao = `aaaaaaaaaaaa`
+console.log(l1.descricao);
+}
+
+
+
+let l2 = criarLivro("1984", "George Orwell", 1949, 416, true);
+let l3 = criarLivro("Dom Casmurro", "Machado de Assis", 1899, 256, false);
+let l4 = criarLivro("O Hobbit", "J.R.R. Tolkien", 1937, 336, true);
+let l5 = criarLivro("Harry Potter e a Pedra Filosofal", "J.K. Rowling", 1997, 264, false);
+let l6 = criarLivro("O Pequeno Príncipe", "Antoine de Saint-Exupéry", 1943, 96, false);
+let l7 = criarLivro("Percy Jackson e o Ladrão de Raios", "Rick Riordan", 2005, 400, true);
+let l8 = criarLivro("A Revolução dos Bichos", "George Orwell", 1945, 152, false);
+let l9 = criarLivro("O Código Da Vinci", "Dan Brown", 2003, 480, true);
+let l10 = criarLivro("O Senhor dos Anéis", "J.R.R. Tolkien", 1954, 1216, false);
 
 // ======================================
 // 2. Crie um array de livros
@@ -39,6 +87,8 @@
 // - alguns disponíveis
 
 
+
+
 // ======================================
 // 3. map()
 // ======================================
@@ -46,6 +96,13 @@
 // Utilize map() para criar um novo array contendo
 // apenas os títulos dos livros.
 
+let livros = [l2,l3,l4,l5,l6,l7,l8,l9];
+
+const titulos = livros.map((livro)=>{
+return livro.titulo
+})
+
+console.log(titulos);
 
 // Resultado esperado:
 //
@@ -54,6 +111,7 @@
 //   "1984",
 //   ...
 // ]
+
 
 
 // ======================================
