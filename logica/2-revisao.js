@@ -124,6 +124,17 @@ console.log(titulos);
 // Depois crie outro array contendo
 // apenas livros com mais de 300 páginas.
 
+console.log(`-----------------------------------------------`);
+
+
+let lDisponiveis = livros.filter((livro)=>{
+    return livro.emprestado === false
+})
+let mais300 = livros.filter((livro)=>{return livro.paginas > 300 }) 
+
+
+console.log(lDisponiveis);
+console.log(mais300);
 
 // ======================================
 // 5. reduce()
