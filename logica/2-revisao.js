@@ -149,6 +149,13 @@ console.log(mais300);
 // - A média de páginas dos livros.
 
 
+let totalP = livros.reduce((ac, livro)=>{
+    return ac + livro.paginas
+},0)
+
+
+console.log(totalP);
+
 // ======================================
 // 6. Destructuring
 // ======================================
@@ -165,6 +172,13 @@ console.log(mais300);
 // Exiba algo como:
 //
 // Dom Casmurro - Machado de Assis
+
+
+const [livro1] = livros
+console.log(livro1);
+
+const [{autor, titulo}] = livros
+console.log(autor + ` - ` + titulo);
 
 
 // ======================================
