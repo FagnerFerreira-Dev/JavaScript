@@ -292,6 +292,18 @@ livros[1].emprestar
 // buscarLivros(livros, livro => livro.autor === "Machado de Assis");
 //
 // buscarLivros(livros, livro => livro.emprestado);
+console.log(`----------------------------------------------------------------------------`);
+
+function buscarLivros(ls, criterio) {
+    ls.forEach(livro => {
+       if (criterio(livro)) {
+        console.log(livro);
+       } 
+    });
+}
+
+buscarLivros(livros, livro => livro.autor === "Machado de Assis")
+buscarLivros(livros, livro => livro.titulo === "O Hobbit")
 
 
 // ======================================
