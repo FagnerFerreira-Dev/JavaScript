@@ -259,6 +259,9 @@ livros[1].emprestar
 // Livro.prototype.emprestar
 // Livro.prototype.devolver
 
+console.log(`------------------------------------------------------`);
+console.log(`------------------------------------------------------`);
+
 
 // ======================================
 // 10. sort()
@@ -272,6 +275,11 @@ livros[1].emprestar
 //
 // - Do maior número de páginas
 //   para o menor.
+
+const ordenadors = livros.sort((a, b) => a.ano - b.ano)
+console.log(ordenadors);
+const ordenadosP = livros.sort((a, b) => a.paginas - b.paginas)
+
 
 
 // ======================================
@@ -292,18 +300,18 @@ livros[1].emprestar
 // buscarLivros(livros, livro => livro.autor === "Machado de Assis");
 //
 // buscarLivros(livros, livro => livro.emprestado);
-console.log(`----------------------------------------------------------------------------`);
+// console.log(`----------------------------------------------------------------------------`);
 
-function buscarLivros(ls, criterio) {
-    ls.forEach(livro => {
-       if (criterio(livro)) {
-        console.log(livro);
-       } 
-    });
-}
+// function buscarLivros(ls, criterio) {
+//     ls.forEach(livro => {
+//        if (criterio(livro)) {
+//         console.log(livro);
+//        } 
+//     });
+// }
 
-buscarLivros(livros, livro => livro.autor === "Machado de Assis")
-buscarLivros(livros, livro => livro.titulo === "O Hobbit")
+// buscarLivros(livros, livro => livro.autor === "Machado de Assis")
+// buscarLivros(livros, livro => livro.titulo === "O Hobbit")
 
 
 // ======================================
