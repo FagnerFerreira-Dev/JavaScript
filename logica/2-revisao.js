@@ -42,6 +42,7 @@ const criarLivro = (titulo, autor, ano, paginas, emprestado) => {
         },
         emprestar(){
             this.emprestado = true
+            console.log(contador());
             return `emprestado`
         },
         devolver(){
@@ -205,6 +206,24 @@ console.log(autor + ` - ` + titulo);
 // ...
 
 // Não utilize variável global.
+
+const Criarcontador = (c) => {
+   let cont = 0;
+
+   return () => {
+    return cont++
+   }
+
+   return cont
+};
+
+const contador = Criarcontador()
+
+console.log(contador());
+livros[1].emprestar
+
+
+
 
 
 // ======================================
