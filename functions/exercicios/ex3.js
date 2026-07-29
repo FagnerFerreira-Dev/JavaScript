@@ -60,10 +60,10 @@ const pessoas = [
 //  {nome:"João", idade:30}
 // ]
 
-// let maioresIdade2 = pessoas2.filter(value => value.idade >= 18)
-// .map(value => value.nome)
+let maioresIdade2 = pessoas2.filter(value => value.idade >= 18)
+.map(value => value.nome)
 
-// console.log(maioresIdade2);
+console.log(maioresIdade2);
 
 
 
@@ -122,8 +122,17 @@ buscas
 APIs
 */
 
-
+function debounce(funcao, tempo) {
+    setTimeout(() => {
+        funcao()
+    }, tempo);
+}
  
+function dizerOi(){
+    console.log(`oiiii, tudo bom?`);
+}
+
+debounce(dizerOi, 1000)
 
 // ==============================================
 // FIM DOS EXERCÍCIOS

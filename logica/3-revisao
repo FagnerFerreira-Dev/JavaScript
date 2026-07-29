@@ -2,6 +2,43 @@
 // LISTA DE EXERCÍCIOS JAVASCRIPT #2
 // ==============================================
 
+const criarLivro = (titulo, autor, ano, paginas, emprestado) => {
+    return {
+        titulo, 
+        autor,
+        ano,
+        paginas,
+        emprestado,
+
+        get descricao(){
+            return `${titulo} - ${autor} ${ano} `
+        },
+        emprestar(){
+            this.emprestado = true
+            console.log(contador());
+            return `emprestado`
+        },
+        devolver(){
+            this.emprestado = false
+            return `devolvido`
+        }
+    }
+}
+
+let l1 = criarLivro(`Mitologia nordica`, `Neil Gaiman`, 2005, 50, false)
+let l2 = criarLivro("1984", "George Orwell", 1949, 416, true);
+let l3 = criarLivro("Dom Casmurro", "Machado de Assis", 1899, 256, false);
+let l4 = criarLivro("O Hobbit", "J.R.R. Tolkien", 1937, 336, true);
+let l5 = criarLivro("Harry Potter e a Pedra Filosofal", "J.K. Rowling", 1997, 264, false);
+let l6 = criarLivro("O Pequeno Príncipe", "Antoine de Saint-Exupéry", 1943, 96, false);
+let l7 = criarLivro("Percy Jackson e o Ladrão de Raios", "Rick Riordan", 2005, 400, true);
+let l8 = criarLivro("A Revolução dos Bichos", "George Orwell", 1945, 152, false);
+let l9 = criarLivro("O Código Da Vinci", "Dan Brown", 2003, 480, true);
+let l10 = criarLivro("O Senhor dos Anéis", "J.R.R. Tolkien", 1954, 1216, false);
+
+
+let todosLivros = [l1,l2,,l3,l4,l5,l6,l7,l8,l9,l10]
+
 // ----------------------------------------------
 // EXERCÍCIO 1 - REST OPERATOR
 // ----------------------------------------------
@@ -188,6 +225,9 @@ console.log(livroslista.every(p => p.paginas >= 100));
 //
 // Retorne true ou false.
 
+console.log(todosLivros.some(ls => ls.emprestado));
+
+
 // ----------------------------------------------
 // EXERCÍCIO 8 - INCLUDES
 // ----------------------------------------------
@@ -203,6 +243,8 @@ const autores = [
 // o autor:
 //
 // "George Orwell"
+
+console.log(autores.includes(`George Orwell`));
 
 // ----------------------------------------------
 // EXERCÍCIO 9 - SORT
@@ -222,6 +264,10 @@ const numeros = [
 //
 // 2) Do maior para o menor.
 
+console.log(numeros.sort((a,b) => a - b));
+
+
+
 // ----------------------------------------------
 // EXERCÍCIO 10 - REVERSE
 // ----------------------------------------------
@@ -229,6 +275,7 @@ const numeros = [
 // Depois de ordenar os números,
 // utilize reverse()
 // para inverter a ordem do array.
+console.log((numeros.sort((a,b) => a-b)).reverse());
 
 // ----------------------------------------------
 // EXERCÍCIO 11 - MATH

@@ -52,12 +52,11 @@ const criarLivro = (titulo, autor, ano, paginas, emprestado) => {
     }
 }
 
-let l1 = criarLivro(`Mitologia nordica`, `Neil Gaiman`, 2005, 50, false)
 
 {
-console.log(l1.emprestado);
-console.log(l1.devolver());
-console.log(l1.emprestado);
+    console.log(l1.emprestado);
+    console.log(l1.devolver());
+    console.log(l1.emprestado);
 console.log(l1.descricao);
 l1.descricao = `aaaaaaaaaaaa`
 console.log(l1.descricao);
@@ -65,6 +64,7 @@ console.log(l1.descricao);
 
 
 
+let l1 = criarLivro(`Mitologia nordica`, `Neil Gaiman`, 2005, 50, false)
 let l2 = criarLivro("1984", "George Orwell", 1949, 416, true);
 let l3 = criarLivro("Dom Casmurro", "Machado de Assis", 1899, 256, false);
 let l4 = criarLivro("O Hobbit", "J.R.R. Tolkien", 1937, 336, true);
@@ -97,7 +97,7 @@ let l10 = criarLivro("O Senhor dos Anéis", "J.R.R. Tolkien", 1954, 1216, false)
 // Utilize map() para criar um novo array contendo
 // apenas os títulos dos livros.
 
-let livros = [l2,l3,l4,l5,l6,l7,l8,l9,l10];
+let livros = l1, [l2,l3,l4,l5,l6,l7,l8,l9,l10];
 
 const titulos = livros.map((livro)=>{
 return livro.titulo
