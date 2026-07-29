@@ -324,18 +324,18 @@ console.log(livros[8]);
 // buscarLivros(livros, livro => livro.autor === "Machado de Assis");
 //
 // buscarLivros(livros, livro => livro.emprestado);
-// console.log(`----------------------------------------------------------------------------`);
+console.log(`----------------------------------------------------------------------------`);
 
-// function buscarLivros(ls, criterio) {
-//     ls.forEach(livro => {
-//        if (criterio(livro)) {
-//         console.log(livro);
-//        } 
-//     });
-// }
+function buscarLivros(ls, criterio) {
+    ls.forEach(livro => {
+       if (criterio(livro)) {
+        console.log(livro);
+       } 
+    });
+}
 
-// buscarLivros(livros, livro => livro.autor === "Machado de Assis")
-// buscarLivros(livros, livro => livro.titulo === "O Hobbit")
+buscarLivros(livros, livro => livro.autor === "Machado de Assis")
+buscarLivros(livros, livro => livro.titulo === "O Hobbit")
 
 
 // ======================================

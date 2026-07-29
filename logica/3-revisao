@@ -1,0 +1,436 @@
+// ==============================================
+// LISTA DE EXERCÍCIOS JAVASCRIPT #2
+// ==============================================
+
+// ----------------------------------------------
+// EXERCÍCIO 1 - REST OPERATOR
+// ----------------------------------------------
+
+// Crie uma função chamada "somar".
+//
+// Ela deve receber qualquer quantidade de números
+// e retornar a soma deles.
+//
+// Exemplo:
+//
+// somar(10, 20, 30); // 60
+// somar(5, 10);      // 15
+//
+// Dica:
+// Utilize o operador ...
+
+// ----------------------------------------------
+// EXERCÍCIO 2 - SPREAD OPERATOR
+// ----------------------------------------------
+
+const livros1 = [
+    "Dom Casmurro",
+    "1984"
+];
+
+const livros2 = [
+    "O Hobbit",
+    "Duna"
+];
+
+// Crie um novo array chamado "biblioteca"
+// contendo todos os livros dos dois arrays.
+//
+// Resultado esperado:
+//
+// [
+//   "Dom Casmurro",
+//   "1984",
+//   "O Hobbit",
+//   "Duna"
+// ]
+
+// ----------------------------------------------
+// EXERCÍCIO 3 - TEMPLATE STRINGS
+// ----------------------------------------------
+
+// Crie uma função que receba um objeto livro.
+//
+// Exemplo:
+//
+// {
+//     titulo: "Dom Casmurro",
+//     autor: "Machado de Assis",
+//     ano: 1899
+// }
+//
+// A função deve retornar:
+//
+// O livro Dom Casmurro foi escrito por Machado de Assis em 1899.
+//
+// Utilize template strings.
+
+// ----------------------------------------------
+// EXERCÍCIO 4 - DEFAULT PARAMETERS
+// ----------------------------------------------
+
+// Crie uma função:
+//
+// criarUsuario(nome, idade = 18)
+//
+// Caso a idade não seja informada,
+// ela deverá assumir o valor 18.
+//
+// A função deve retornar um objeto.
+
+// ----------------------------------------------
+// EXERCÍCIO 5 - ARROW FUNCTIONS
+// ----------------------------------------------
+
+// Transforme a função abaixo em Arrow Function.
+
+function dobro(numero){
+    return numero * 2;
+}
+
+// Faça o mesmo para:
+
+function ehPar(numero){
+    return numero % 2 === 0;
+}
+
+// ----------------------------------------------
+// EXERCÍCIO 6 - EVERY
+// ----------------------------------------------
+
+// Utilizando o método every(),
+// verifique se TODOS os livros
+// possuem mais de 100 páginas.
+//
+// Retorne true ou false.
+
+// ----------------------------------------------
+// EXERCÍCIO 7 - SOME
+// ----------------------------------------------
+
+// Utilizando o método some(),
+// verifique se existe
+// algum livro emprestado.
+//
+// Retorne true ou false.
+
+// ----------------------------------------------
+// EXERCÍCIO 8 - INCLUDES
+// ----------------------------------------------
+
+const autores = [
+    "Machado de Assis",
+    "George Orwell",
+    "Neil Gaiman"
+];
+
+// Utilize includes()
+// para verificar se existe
+// o autor:
+//
+// "George Orwell"
+
+// ----------------------------------------------
+// EXERCÍCIO 9 - SORT
+// ----------------------------------------------
+
+const numeros = [
+    50,
+    8,
+    100,
+    2,
+    70
+];
+
+// Ordene o array:
+//
+// 1) Do menor para o maior.
+//
+// 2) Do maior para o menor.
+
+// ----------------------------------------------
+// EXERCÍCIO 10 - REVERSE
+// ----------------------------------------------
+
+// Depois de ordenar os números,
+// utilize reverse()
+// para inverter a ordem do array.
+
+// ----------------------------------------------
+// EXERCÍCIO 11 - MATH
+// ----------------------------------------------
+
+// Faça funções para:
+//
+// 1) Gerar um número aleatório
+// entre 1 e 100.
+//
+// 2) Arredondar um número decimal.
+//
+// 3) Descobrir o maior número
+// entre cinco números.
+//
+// Utilize os métodos da classe Math.
+
+// ----------------------------------------------
+// EXERCÍCIO 12 - DATE
+// ----------------------------------------------
+
+// Utilize o objeto Date para mostrar:
+//
+// Dia atual.
+//
+// Mês atual.
+//
+// Ano atual.
+//
+// Hora atual.
+//
+// Minutos atuais.
+//
+// Depois exiba:
+//
+// 28/07/2026 20:35
+//
+// (utilize a data atual do sistema).
+
+// ----------------------------------------------
+// EXERCÍCIO 13 - OBJECT.KEYS()
+// ----------------------------------------------
+
+// Dado um objeto livro,
+// mostre todas as propriedades.
+//
+// Exemplo:
+//
+// titulo
+// autor
+// ano
+// paginas
+// emprestado
+
+// ----------------------------------------------
+// EXERCÍCIO 14 - OBJECT.VALUES()
+// ----------------------------------------------
+
+// Mostre todos os valores
+// de um objeto livro.
+
+// ----------------------------------------------
+// EXERCÍCIO 15 - OBJECT.ENTRIES()
+// ----------------------------------------------
+
+// Percorra o objeto livro.
+//
+// Mostre:
+//
+// titulo : Dom Casmurro
+//
+// autor : Machado de Assis
+//
+// ano : 1899
+
+// ----------------------------------------------
+// EXERCÍCIO 16 - DESTRUCTURING AVANÇADO
+// ----------------------------------------------
+
+// Utilizando apenas UMA linha:
+//
+// Pegue:
+//
+// - O segundo livro.
+//
+// - O título.
+//
+// - O autor.
+//
+// Utilize destructuring.
+
+// ----------------------------------------------
+// EXERCÍCIO 17 - FOR...OF
+// ----------------------------------------------
+
+// Percorra o array livros
+// utilizando for...of.
+//
+// Mostre apenas
+// o título de cada livro.
+
+// ----------------------------------------------
+// EXERCÍCIO 18 - FOR...IN
+// ----------------------------------------------
+
+// Percorra um objeto livro
+// utilizando for...in.
+//
+// Mostre:
+//
+// titulo -> Dom Casmurro
+//
+// autor -> Machado de Assis
+
+// ----------------------------------------------
+// EXERCÍCIO 19 - SET
+// ----------------------------------------------
+
+const tecnologias = [
+    "JS",
+    "HTML",
+    "CSS",
+    "JS",
+    "HTML",
+    "React"
+];
+
+// Utilize Set
+// para remover
+// todos os elementos repetidos.
+
+// ----------------------------------------------
+// EXERCÍCIO 20 - MAP (OBJETO MAP)
+// ----------------------------------------------
+
+// Crie um Map.
+//
+// Armazene:
+//
+// 001 -> Dom Casmurro
+//
+// 002 -> 1984
+//
+// 003 -> O Hobbit
+//
+// Depois procure
+// o livro de código "002".
+
+// ==============================================
+// DESAFIO 1
+// ==============================================
+
+const vendas = [
+    {
+        vendedor: "Ana",
+        valor: 300
+    },
+    {
+        vendedor: "João",
+        valor: 500
+    },
+    {
+        vendedor: "Ana",
+        valor: 200
+    },
+    {
+        vendedor: "Pedro",
+        valor: 100
+    }
+];
+
+// Utilizando apenas reduce(),
+// crie um objeto:
+//
+// {
+//     Ana: 500,
+//     João: 500,
+//     Pedro: 100
+// }
+
+// ==============================================
+// DESAFIO 2
+// ==============================================
+
+// Crie uma agenda telefônica.
+//
+// Ela deve permitir:
+//
+// - Adicionar contato.
+//
+// - Remover contato.
+//
+// - Procurar contato.
+//
+// - Atualizar telefone.
+//
+// - Listar todos os contatos.
+//
+// Escolha a estrutura de dados
+// que considerar mais adequada
+// (Array, Object ou Map).
+
+// ==============================================
+// DESAFIO 3
+// ==============================================
+
+// Crie um sistema de carrinho de compras.
+//
+// Cada produto possui:
+//
+// - Nome.
+//
+// - Preço.
+//
+// - Quantidade.
+//
+// Implemente funções para:
+//
+// - Adicionar produto.
+//
+// - Remover produto.
+//
+// - Calcular valor total.
+//
+// - Listar produtos.
+//
+// - Esvaziar carrinho.
+
+// ==============================================
+// DESAFIO EXTRA (NÍVEL INTERMEDIÁRIO)
+// ==============================================
+
+// Crie um sistema de biblioteca.
+//
+// Cada livro possui:
+//
+// - Título.
+//
+// - Autor.
+//
+// - Ano.
+//
+// - Número de páginas.
+//
+// - Categoria.
+//
+// - Emprestado (true ou false).
+//
+// Implemente funções para:
+//
+// - Adicionar livro.
+//
+// - Remover livro.
+//
+// - Buscar por título.
+//
+// - Buscar por autor.
+//
+// - Listar apenas disponíveis.
+//
+// - Listar apenas emprestados.
+//
+// - Ordenar por ano.
+//
+// - Ordenar por páginas.
+//
+// - Contar quantos livros existem.
+//
+// - Calcular o total de páginas.
+//
+// Faça utilizando os métodos:
+//
+// map()
+// filter()
+// find()
+// reduce()
+// sort()
+// some()
+// every()
