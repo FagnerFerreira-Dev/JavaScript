@@ -19,6 +19,18 @@
 // Dica:
 // Utilize o operador ...
 
+function soma(...valores) {
+    let total = 0
+
+    valores.forEach(element => {
+        total += element
+    });
+    return total
+}
+
+console.log(soma(100, 100, 100));
+
+
 // ----------------------------------------------
 // EXERCÍCIO 2 - SPREAD OPERATOR
 // ----------------------------------------------
@@ -45,6 +57,10 @@ const livros2 = [
 //   "Duna"
 // ]
 
+const livrosTotal = [...livros1, ...livros2]
+
+console.log(livrosTotal);
+
 // ----------------------------------------------
 // EXERCÍCIO 3 - TEMPLATE STRINGS
 // ----------------------------------------------
@@ -64,6 +80,20 @@ const livros2 = [
 // O livro Dom Casmurro foi escrito por Machado de Assis em 1899.
 //
 // Utilize template strings.
+
+let falaLivros = (...livro)  => {
+    let livros = [];
+
+    livro.forEach((el)=>{
+        livros.push(el)
+    })
+
+    return livros
+}
+
+
+console.log(falaLivros(...livros1, ...livros2));
+
 
 // ----------------------------------------------
 // EXERCÍCIO 4 - DEFAULT PARAMETERS
