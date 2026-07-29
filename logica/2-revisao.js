@@ -97,7 +97,7 @@ let l10 = criarLivro("O Senhor dos Anéis", "J.R.R. Tolkien", 1954, 1216, false)
 // Utilize map() para criar um novo array contendo
 // apenas os títulos dos livros.
 
-let livros = [l2,l3,l4,l5,l6,l7,l8,l9];
+let livros = [l2,l3,l4,l5,l6,l7,l8,l9,l10];
 
 const titulos = livros.map((livro)=>{
 return livro.titulo
@@ -240,6 +240,27 @@ livros[1].emprestar
 // Livro 3
 // ...
 
+
+console.log(`----------------------------`);
+function contar(ls, v) {
+    if (v === ls ) {
+        console.log(`fim`);
+        return
+    }   
+        console.log(`livro: ${v} - ${livros[v].titulo}`);
+        contar(ls, v+1)
+        
+    
+}
+
+contar( livros.length,0)
+
+console.log(livros[8]);
+
+
+// console.log(livros.length);
+
+
 // Não utilize for ou while.
 
 
@@ -259,8 +280,8 @@ livros[1].emprestar
 // Livro.prototype.emprestar
 // Livro.prototype.devolver
 
-console.log(`------------------------------------------------------`);
-console.log(`------------------------------------------------------`);
+// console.log(`------------------------------------------------------`);
+// console.log(`------------------------------------------------------`);
 
 
 // ======================================
@@ -276,10 +297,13 @@ console.log(`------------------------------------------------------`);
 // - Do maior número de páginas
 //   para o menor.
 
-const ordenadors = livros.sort((a, b) => a.ano - b.ano)
-console.log(ordenadors);
-const ordenadosP = livros.sort((a, b) => a.paginas - b.paginas)
+// const ordenadors = livros.sort((a, b) => a.ano - b.ano)
+// console.log(ordenadors);
+// console.log(`-----------------------------------------------------------`);
 
+// const ordenadosP = livros.sort((a, b) => b.paginas - a.paginas)
+
+// console.log(ordenadosP);
 
 
 // ======================================
