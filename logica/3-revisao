@@ -37,7 +37,7 @@ let l9 = criarLivro("O Código Da Vinci", "Dan Brown", 2003, 480, true);
 let l10 = criarLivro("O Senhor dos Anéis", "J.R.R. Tolkien", 1954, 1216, false);
 
 
-let todosLivros = [l1,l2,,l3,l4,l5,l6,l7,l8,l9,l10]
+let todosLivros = [l1,l2,l3,l4,l5,l6,l7,l8,l9,l10]
 
 // ----------------------------------------------
 // EXERCÍCIO 1 - REST OPERATOR
@@ -293,27 +293,11 @@ console.log((numeros.sort((a,b) => a-b)).reverse());
 //
 // Utilize os métodos da classe Math.
 
-// ----------------------------------------------
-// EXERCÍCIO 12 - DATE
-// ----------------------------------------------
 
-// Utilize o objeto Date para mostrar:
-//
-// Dia atual.
-//
-// Mês atual.
-//
-// Ano atual.
-//
-// Hora atual.
-//
-// Minutos atuais.
-//
-// Depois exiba:
-//
-// 28/07/2026 20:35
-//
-// (utilize a data atual do sistema).
+let aleatorioN = Math.floor(((Math.random() * 10) +1))
+
+console.log(aleatorioN);
+
 
 // ----------------------------------------------
 // EXERCÍCIO 13 - OBJECT.KEYS()
@@ -330,12 +314,16 @@ console.log((numeros.sort((a,b) => a-b)).reverse());
 // paginas
 // emprestado
 
+console.log(Object.keys(l10));
+
 // ----------------------------------------------
 // EXERCÍCIO 14 - OBJECT.VALUES()
 // ----------------------------------------------
 
 // Mostre todos os valores
 // de um objeto livro.
+
+console.log(Object.values(l1));
 
 // ----------------------------------------------
 // EXERCÍCIO 15 - OBJECT.ENTRIES()
@@ -350,6 +338,9 @@ console.log((numeros.sort((a,b) => a-b)).reverse());
 // autor : Machado de Assis
 //
 // ano : 1899
+
+
+console.log(Object.entries(l10));
 
 // ----------------------------------------------
 // EXERCÍCIO 16 - DESTRUCTURING AVANÇADO
@@ -367,6 +358,10 @@ console.log((numeros.sort((a,b) => a-b)).reverse());
 //
 // Utilize destructuring.
 
+let [livro2, titulo, autor] = [todosLivros[1], {titulo: todosLivros[1].titulo}, {autor: todosLivros[1].autor}]
+
+console.log(livro2, titulo, autor);
+
 // ----------------------------------------------
 // EXERCÍCIO 17 - FOR...OF
 // ----------------------------------------------
@@ -377,6 +372,11 @@ console.log((numeros.sort((a,b) => a-b)).reverse());
 // Mostre apenas
 // o título de cada livro.
 
+console.log(`--------------------------------------------------------------------------------`);
+
+for (const livro of todosLivros) {
+    console.log(livro.titulo);
+} 
 // ----------------------------------------------
 // EXERCÍCIO 18 - FOR...IN
 // ----------------------------------------------
@@ -407,6 +407,12 @@ const tecnologias = [
 // para remover
 // todos os elementos repetidos.
 
+const semRepetidos = [...new Set(tecnologias)]
+
+console.log(semRepetidos);
+
+
+
 // ----------------------------------------------
 // EXERCÍCIO 20 - MAP (OBJETO MAP)
 // ----------------------------------------------
@@ -424,6 +430,32 @@ const tecnologias = [
 // Depois procure
 // o livro de código "002".
 
+
+const livrosmap = new Map()
+
+livrosmap.set()
+
+// ----------------------------------------------
+// EXERCÍCIO 12 - DATE
+// ----------------------------------------------
+
+// Utilize o objeto Date para mostrar:
+//
+// Dia atual.
+//
+// Mês atual.
+//
+// Ano atual.
+//
+// Hora atual.
+//
+// Minutos atuais.
+//
+// Depois exiba:
+//
+// 28/07/2026 20:35
+//
+// (utilize a data atual do sistema).
 // ==============================================
 // DESAFIO 1
 // ==============================================
