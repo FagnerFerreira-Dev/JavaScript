@@ -108,6 +108,17 @@ console.log(falaLivros(...livros1, ...livros2));
 //
 // A função deve retornar um objeto.
 
+
+function criarUsuario(nome, idade = 18){
+    return {
+        nome,
+        idade
+    }
+}
+
+
+console.log(criarUsuario(`Fagner`));
+
 // ----------------------------------------------
 // EXERCÍCIO 5 - ARROW FUNCTIONS
 // ----------------------------------------------
@@ -118,11 +129,13 @@ function dobro(numero){
     return numero * 2;
 }
 
+let dobroArrow = n =>{return n + 2}
 // Faça o mesmo para:
 
-function ehPar(numero){
-    return numero % 2 === 0;
-}
+let ehPar = (numero) => {return numero % 2 === 0;}
+
+console.log(ehPar(5));
+
 
 // ----------------------------------------------
 // EXERCÍCIO 6 - EVERY
@@ -133,6 +146,37 @@ function ehPar(numero){
 // possuem mais de 100 páginas.
 //
 // Retorne true ou false.
+
+
+const livroslista = [
+  {
+    nome: "Dom Casmurro",
+    ano: 1899,
+    paginas: 256
+  },
+  {
+    nome: "1984",
+    ano: 1949,
+    paginas: 328
+  },
+  {
+    nome: "O Hobbit",
+    ano: 1937,
+    paginas: 336
+  },
+  {
+    nome: "Mitologia Nórdica",
+    ano: 2017,
+    paginas: 304
+  },
+  {
+    nome: "Harry Potter e a Pedra Filosofal",
+    ano: 1997,
+    paginas: 64
+  }
+];
+
+console.log(livroslista.every(p => p.paginas >= 100));
 
 // ----------------------------------------------
 // EXERCÍCIO 7 - SOME
