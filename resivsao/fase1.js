@@ -158,9 +158,23 @@ Assuntos: Strings, loops e metodos
 //
 // Escreva sua solucao abaixo:
 
+*/
 
 
 
+function contarVogais(frase) {
+    let ac = 0;
+    let vogais = [`a`,`e`,`i`,`o`,`u`]
+    for( l of frase.toLowerCase()){{
+        if (vogais.includes(l)) ++ac
+    }
+}
+
+return ac
+}
+
+console.log(contarVogais(`ABEL Fagner`));
+/*
 ------------------------------------------------------------
 DESAFIO 04 - REMOVER ELEMENTOS DUPLICADOS
 Nivel: Facil para intermediario
